@@ -17,6 +17,10 @@ Una herramienta web potente y flexible que convierte estructuras de directorios 
 - 📋 **Plantillas predefinidas**: Para frameworks y lenguajes populares
 - 📱 **Diseño responsive**: Adaptable a cualquier dispositivo
 
+## Vista de la Aplicación
+
+![Vista de la Aplicación](static/img/home.png)
+
 
 ## 🚀 Instalación
 
@@ -46,7 +50,7 @@ Una herramienta web potente y flexible que convierte estructuras de directorios 
 5. Ejecuta la aplicación:
    ```
     bash
-    python main.py
+    python3 main.py
    ```
 
 ## 🎯 Uso
