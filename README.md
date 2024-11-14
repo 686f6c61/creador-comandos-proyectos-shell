@@ -108,8 +108,8 @@ REGLAS IMPORTANTES:
 ### Ejemplos de uso
 
 1. **Aplicación React con TypeScript**
-    ```
-Quiero una aplicación React con TypeScript, testing y storybook
+   
+    ```Quiero una aplicación React con TypeScript, testing y storybook
     ```
 
 ## 📚 Plantillas
