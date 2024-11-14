@@ -94,7 +94,7 @@ Quiero un proyecto de comercio electrónico con React y Node.js
 ### Prompt de IA
 
 La herramienta utiliza GPT-3.5-turbo con un prompt especializado:
-```python
+python
 SYSTEM_PROMPT = """Eres un experto en arquitectura de software que genera estructuras de directorios detalladas.
 REGLAS IMPORTANTES:
 
@@ -104,7 +104,6 @@ REGLAS IMPORTANTES:
 4. Incluye estructura típica de cada framework/lenguaje
 5. Los directorios DEBEN terminar en /
 6. Usa el formato árbol con ├── y └──
-"""
 
 ### Ejemplos de uso
 
