@@ -1,0 +1,185 @@
+/* Estilos del contenedor base */
+.container {
+    max-width: 800px;          /* Ancho máximo del contenedor */
+    margin: 0 auto;            /* Centrado horizontal */
+    padding: 1em;              /* Espaciado interno */
+}
+
+/* Estilos del encabezado */
+.header {
+    text-align: center;        /* Centrado del texto */
+    padding: 2em 0;            /* Espaciado vertical */
+}
+
+.header h1 {
+    font-size: 2em;           /* Tamaño del título */
+    margin: 0;                /* Eliminar margen por defecto */
+    color: #000000;           /* Color negro para el título */
+}
+
+.header p {
+    color: #666666;           /* Color gris para el subtítulo */
+}
+
+/* Selector de idioma */
+.language-switch {
+    position: absolute;        /* Posicionamiento absoluto */
+    top: 1rem;                /* Distancia desde arriba */
+    right: 1rem;              /* Distancia desde la derecha */
+}
+
+/* Casos de uso y guía de formatos */
+.use-cases, .format-guide {
+    margin-bottom: 2em;       /* Espaciado inferior */
+}
+
+/* Ejemplos de casos de uso y formatos */
+.use-case-example, .format-example {
+    background-color: #F8F9FA;  /* Fondo gris claro */
+    padding: 1em;               /* Espaciado interno */
+    border-radius: 4px;         /* Bordes redondeados */
+    margin-bottom: 1em;         /* Espaciado inferior */
+}
+
+/* Títulos de ejemplos */
+.use-case-example h6, .format-example h6 {
+    color: #000000;            /* Color negro para títulos */
+    margin-bottom: 0.5em;      /* Espaciado inferior */
+}
+
+/* Bloques de código preformateado */
+.use-case-example pre, .format-example pre {
+    background-color: #FFFFFF;  /* Fondo blanco */
+    padding: 1em;              /* Espaciado interno */
+    border-radius: 4px;        /* Bordes redondeados */
+    margin: 0;                 /* Sin márgenes */
+    font-family: 'Courier New', Monaco, monospace;  /* Fuente monoespaciada */
+}
+
+/* Código dentro de los bloques */
+.use-case-example code, .format-example code {
+    color: #000000;            /* Color negro para el código */
+    white-space: pre-wrap;     /* Preservar espacios y permitir wrap */
+    word-wrap: break-word;     /* Permitir ruptura de palabras */
+    font-family: 'Courier New', Monaco, monospace;  /* Fuente monoespaciada */
+}
+
+/* Estilos del formulario */
+.content {
+    padding: 1em;             /* Espaciado interno */
+}
+
+form {
+    margin-bottom: 2em;       /* Espaciado inferior */
+}
+
+/* Etiquetas del formulario */
+label {
+    font-weight: bold;        /* Texto en negrita */
+    margin-top: 1em;         /* Espaciado superior */
+    color: #000000;          /* Color negro */
+}
+
+/* Campos de selección y área de texto */
+select, textarea {
+    margin-bottom: 1em;      /* Espaciado inferior */
+    background-color: #FFFFFF !important;  /* Fondo blanco */
+    color: #000000 !important;            /* Texto negro */
+    border: 1px solid #CCCCCC !important; /* Borde gris */
+}
+
+/* Área de texto específica */
+textarea {
+    font-family: 'Courier New', Monaco, monospace;  /* Fuente monoespaciada */
+    min-height: 200px;       /* Altura mínima */
+}
+
+/* Mensajes de error */
+.alert-danger {
+    background-color: #FFF3F3 !important;  /* Fondo rojo claro */
+    color: #DC3545 !important;             /* Texto rojo */
+    border: 1px solid #DC3545 !important;  /* Borde rojo */
+}
+
+/* Estilos de resultados */
+.result {
+    margin-top: 2em;         /* Espaciado superior */
+    background-color: #FFFFFF !important;  /* Fondo blanco */
+    border: 1px solid #CCCCCC !important; /* Borde gris */
+    border-radius: 4px;      /* Bordes redondeados */
+}
+
+/* Botón de copiar */
+.copy-button {
+    transition: all 0.3s ease;  /* Transición suave */
+}
+
+.copy-button i {
+    margin-right: 0.5em;      /* Espaciado derecho del icono */
+}
+
+/* Controles del formulario */
+.form-control, .form-select {
+    background-color: #FFFFFF !important;  /* Fondo blanco */
+    color: #000000 !important;            /* Texto negro */
+    border: 1px solid #CCCCCC !important; /* Borde gris */
+}
+
+/* Efecto focus en controles */
+.form-control:focus, .form-select:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);  /* Sombra al focus */
+}
+
+/* Botones de plantillas */
+.btn-outline-secondary {
+    border-color: #CCCCCC;    /* Color del borde */
+}
+
+.btn-outline-secondary:hover {
+    background-color: #F8F9FA;  /* Color de fondo al hover */
+    border-color: #666666;      /* Color del borde al hover */
+}
+
+/* Media queries para responsividad */
+@media screen and (max-width: 48em) {
+    .container {
+        padding: 0.5em;       /* Reducir padding en móviles */
+    }
+    
+    .header {
+        padding: 1em 0;       /* Reducir padding del header en móviles */
+    }
+}
+
+/* Animación de resaltado */
+@keyframes highlight {
+    0% { background-color: #ffffff; }    /* Estado inicial */
+    50% { background-color: #e9ecef; }   /* Estado medio */
+    100% { background-color: #ffffff; }  /* Estado final */
+}
+
+.highlight {
+    animation: highlight 1s ease-in-out;  /* Aplicar animación */
+}
+
+/* Estilos del pie de página */
+footer {
+    border-top: 1px solid #eaeaea;  /* Borde superior */
+    margin-top: 2rem;               /* Espaciado superior */
+    background-color: #f8f9fa;      /* Color de fondo */
+}
+
+/* Enlaces del footer */
+footer a {
+    color: #6c757d;           /* Color gris para enlaces */
+}
+
+footer a:hover {
+    color: #212529;           /* Color más oscuro al hover */
+}
+
+/* Botones pequeños en el footer */
+footer .btn-outline-secondary {
+    padding: 0.25rem 0.5rem;   /* Padding reducido */
+    font-size: 0.875rem;       /* Tamaño de fuente más pequeño */
+}

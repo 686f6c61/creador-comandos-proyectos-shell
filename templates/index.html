@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="content">
+    <!-- Generador IA -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Generar con IA</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label for="project_description" class="form-label">Describe tu proyecto</label>
+                        <textarea class="form-control" id="project_description" rows="3" 
+                            placeholder="Ejemplo: Quiero un proyecto de comercio electrónico con React y Node.js..."></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary" onclick="generateStructure()">
+                        <i class="bi bi-robot"></i> Generar Estructura
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Selector de lenguaje -->
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <label for="language_select" class="form-label">Lenguaje/Framework</label>
+            <select id="language_select" class="form-select" onchange="updateTemplates()">
+                <option value="">Selecciona un lenguaje</option>
+                <option value="python">Python</option>
+                <option value="javascript">JavaScript</option>
+                <option value="java">Java</option>
+                <option value="php">PHP</option>
+                <option value="csharp">C#</option>
+                <option value="cpp">C++</option>
+                <option value="go">Go</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Contenedor para las plantillas -->
+    <div id="template_container" class="row mb-4" style="display: none;">
+        <!-- Las plantillas se cargarán dinámicamente aquí -->
+    </div>
+
+    {% include 'format_guide.html' %}
+
+    <form method="post">
+        <div class="mb-4">
+            <label for="directory_structure" class="form-label">Estructura de Directorios</label>
+            <div class="input-group">
+                <textarea class="form-control" id="directory_structure" name="directory_structure" rows="10" 
+                    placeholder="Pega tu estructura de directorios aquí o usa el generador de IA arriba..." required></textarea>
+            </div>
+        </div>
+
+        <div class="row g-3 mb-4">
+            <div class="col-md-6">
+                <label for="os_type" class="form-label">Sistema Operativo</label>
+                <select id="os_type" name="os_type" class="form-select" required>
+                    <option value="linux">Linux</option>
+                    <option value="windows">Windows</option>
+                    <option value="mac">MacOS</option>
+                </select>
+            </div>
+            
+            <div class="col-md-6">
+                <label for="terminal" class="form-label">Terminal</label>
+                <select id="terminal" name="terminal" class="form-select" required>
+                    <!-- Se llena dinámicamente con JavaScript -->
+                </select>
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary mb-4">Convertir</button>
+    </form>
+
+    {% if commands %}
+    <div class="result card">
+        <div class="card-header d-flex justify-content-between align-items-center">
+            <h3 class="h5 mb-0">Comandos Generados:</h3>
+            <button class="btn btn-secondary copy-button" onclick="copyToClipboard()">
+                <i class="bi bi-clipboard"></i> Copiar al Portapapeles
+            </button>
+        </div>
+        <div class="card-body">
+            <pre class="mb-0"><code id="generated-commands">{{ commands }}</code></pre>
+        </div>
+    </div>
+    {% endif %}
+</div>
+{% endblock %}

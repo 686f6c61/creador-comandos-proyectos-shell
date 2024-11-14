@@ -1,0 +1,119 @@
+<div class="format-guide mb-4">
+    <button class="btn btn-info mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#formatGuide">
+        <i class="bi bi-question-circle"></i> <span class="format-guide-text">Guía de Formatos</span>
+    </button>
+    <div class="collapse" id="formatGuide">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="supported-formats-text">Formatos Soportados:</h5>
+                <div class="format-examples mt-3">
+                    <div class="format-example">
+                        <h6>1. <span class="tree-style-text">Estilo Árbol (Por defecto)</span></h6>
+                        <pre><code>project/
+├── src/
+│   ├── main.py
+│   └── utils/
+└── tests/
+    └── test_main.py</code></pre>
+                    </div>
+                    
+                    <div class="format-example mt-3">
+                        <h6>2. <span class="vscode-style-text">Estilo VS Code</span></h6>
+                        <pre><code>> project
+  > src
+    - main.py
+    > utils
+  > tests
+    - test_main.py</code></pre>
+                    </div>
+
+                    <div class="format-example mt-3">
+                        <h6>3. <span class="dash-style-text">Lista con Guiones</span></h6>
+                        <pre><code>- project/
+  - src/
+    - main.py
+    - utils/
+  - tests/
+    - test_main.py</code></pre>
+                    </div>
+
+                    <div class="format-example mt-3">
+                        <h6>4. <span class="windows-dir-text">Estilo DIR de Windows</span></h6>
+                        <pre><code> Directory of C:\project
+<DIR>          src
+ Directory of C:\project\src
+               main.py
+<DIR>          utils
+ Directory of C:\project\tests
+               test_main.py</code></pre>
+                    </div>
+
+                    <div class="format-example mt-3">
+                        <h6>5. <span class="dot-style-text">Notación con Puntos</span></h6>
+                        <pre><code>project/
+.
+└── src/
+    .
+    ├── main.py
+    └── utils/
+.
+└── tests/
+    └── test_main.py</code></pre>
+                    </div>
+
+                    <div class="format-example mt-3">
+                        <h6>6. <span class="json-style-text">Formato JSON</span></h6>
+                        <pre><code>{
+  "project": {
+    "src": {
+      "main.py": null,
+      "utils": {}
+    },
+    "tests": {
+      "test_main.py": null
+    }
+  }
+}</code></pre>
+                    </div>
+
+                    <div class="format-example mt-3">
+                        <h6>7. <span class="yaml-style-text">Formato YAML</span></h6>
+                        <pre><code>project:
+  src:
+    - main.py
+    utils: {}
+  tests:
+    - test_main.py</code></pre>
+                    </div>
+
+                    <div class="format-example mt-3">
+                        <h6>8. <span class="indented-style-text">Estilo Indentado</span></h6>
+                        <pre><code>project/
+  src/
+    main.py
+    utils/
+  tests/
+    test_main.py</code></pre>
+                    </div>
+
+                    <div class="format-example mt-3">
+                        <h6>9. <span class="plain-style-text">Texto Plano</span></h6>
+                        <pre><code>project/
+src/
+src/main.py
+src/utils/
+tests/
+tests/test_main.py</code></pre>
+                    </div>
+                </div>
+                <div class="format-notes mt-3">
+                    <h6><span class="special-notations-text">Notaciones Especiales:</span></h6>
+                    <ul>
+                        <li><span class="permissions-text">Permisos</span>: <code>[0644] config.yaml</code></li>
+                        <li><span class="symlinks-text">Enlaces simbólicos</span>: <code>link.md -> ../README.md</code></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
